@@ -21,3 +21,12 @@ Finished laying out the custom PCB. In the process I removed one of the expansio
 ![image](https://github.com/user-attachments/assets/b7a93fac-50e2-421d-9608-881698ac1a8f)
 
 **Total time spent: 3h**
+
+# May 31st: Updated PCB Layout Again..
+
+After checking the design voer, I realized that improvements could be made. Added mounting holes around the corners, as well as the implementation of a serial port directly on the main board. While it does not use RS232, it uses an arduino-compatable 0/5V signal. The 4-pin header comes with a 5V supply pin, allowing a device to expand it out to any type of standard required. Serial connects into the secondary core directly, allowing it to take some of the load off the main CPU. Appears like an expansion device on the BUS.
+
+![image](https://github.com/user-attachments/assets/90689280-ac9b-46c8-8ba1-bec794d0d639)
+![image](https://github.com/user-attachments/assets/1ebc73b5-60cf-4b7b-a63a-8d72b632d185)
+
+**Total time spent: 3h**

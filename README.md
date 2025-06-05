@@ -15,3 +15,5 @@ There are two bits that control the secondary core: ENABLE (0) and RESET (1). Th
 ## Built-in serial adapter
 The built-in serial adapter is wired directly to the secondary core IRQB pin. If it should be disabled, it can be done so by accessing the internal registers. It uses the R6551 chip. Does not include RS232. When reading data from the serial port, it must use the R6551 as an expansion device, located in the external memory lane. This is so that it can be externally controlled by the primary core. Attempt to read by accessing the global data bus, and wait for an interrupt on the NMIB pin. WAI can be used. The same goes for sending data.
 
+# Timing Control
+Timing control is critical for this system. When PHI2 (the clock) goes from high to low, it indicated the start of a new cycle. VDA/VPA pins change about half-way during the PHI2 low period, and indicate whether the CPU is undergoing an internal cycle.

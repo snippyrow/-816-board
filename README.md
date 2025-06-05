@@ -20,3 +20,6 @@ Timing control is critical for this system. When PHI2 (the clock) goes from high
 
 ## Examples
 If the primary wants to upload something to the secondary, I.E. change the task, it will first disable the core and push it into a reset. This prevent erroneous memory accesses. Then, with the cache mapped as an expansion memory device, begins accessing. The primary is **blocked** from accessing the secondary cache if the core is active. The only way for the two to communicate is through the shared global memory tables. After it is completed, re-enable the secondary.
+
+# Expansion Ports
+The machine contains four expansion ports, wired directly to the primary. Two of the slots are larger, and each one of the two is either wired to IRQB or NMIB. The other two are simply expansion devices. The larger ones have A0-A3, and the smaller ones have A0-A1 as register addresses. The shared memory on the global bus is beyond the 65K from the two cores.

@@ -36,3 +36,6 @@ If the primary wants to upload something to the secondary, I.E. change the task,
 # Expansion Ports
 The machine contains four expansion ports, wired directly to the primary. Two of the slots are larger, and each one of the two is either wired to IRQB or NMIB. The other two are simply expansion devices. The larger ones have A0-A3, and the smaller ones have A0-A1 as register addresses. The shared memory on the global bus is beyond the 65K from the two cores.
 The controller for the secondary, the controller for the serial port, and just about everything else is connected in through the expansion device encoder to save on space.
+
+# Datasheets
+https://www.westerndesigncenter.com/wdc/documentation/w65c816s.pdf

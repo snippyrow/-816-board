@@ -30,3 +30,11 @@ After checking the design voer, I realized that improvements could be made. Adde
 ![image](https://github.com/user-attachments/assets/1ebc73b5-60cf-4b7b-a63a-8d72b632d185)
 
 **Total time spent: 3h**
+
+# June 7th: Finished Major Re-design
+
+I discovered an issue in my original design, the system that enabled the secondary processor was faulty and would never enable it properly. I also discovered issues with the way the primary CPU writes data to memory, as it would sample data on the wrong half of each cycle. This would cause severe issues. Additionally I decided to change up the design of the system, giving each processor 32kb of cache. This way each co-processor can work fully independantly of the other, only needing to halt in case it needs to access the global memory bus, which exists outside the first 65k. I also wrote a ton of documentation in the README.md file, which extensively explains how the board works.
+
+![image](https://github.com/user-attachments/assets/affd5070-b7a5-4b95-a454-886f6870c5b1)
+
+**Total time spent: 9h**

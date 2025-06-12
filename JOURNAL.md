@@ -38,3 +38,11 @@ I discovered an issue in my original design, the system that enabled the seconda
 ![image](https://github.com/user-attachments/assets/affd5070-b7a5-4b95-a454-886f6870c5b1)
 
 **Total time spent: 9h**
+
+# June 11th: Half-way there!
+
+I looked over the entire schematic, checking it twice, and began laying out my new PCB. All good things must come to an end, and it doesn't look as nice as the other one yet. I changed it to use mostly through-hole ICs to make it look more "retro", as well as being easier to prototype with.
+
+![image](https://github.com/user-attachments/assets/08cccd33-277d-4958-aa48-284da7f62b94)
+
+**Total time spent: 2h**

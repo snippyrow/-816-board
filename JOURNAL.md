@@ -46,3 +46,13 @@ I looked over the entire schematic, checking it twice, and began laying out my n
 ![image](https://github.com/user-attachments/assets/08cccd33-277d-4958-aa48-284da7f62b94)
 
 **Total time spent: 2h**
+
+# June 13-14th: Almost done..
+
+I spent this time completing the board layout in the kicad designer, as well as checking the schematic again. I found a few small issues and correct them, though I will probably need to check things one more time before completion. I changed it to have only *two* RAM expansion cards, at 2MB each. This leaves it with 4MB of RAM + expansion cards + local cache. I have put everything into an auto-router, which is going as I write this. I think that I will need to spend a lot more time fixing some of the artifacts of the process, though this is *far* faster than doing it manually.
+
+![image](https://github.com/user-attachments/assets/b45435d5-d0d2-401a-a7ff-c939ad0e8692)
+![image](https://github.com/user-attachments/assets/ed439c49-b33b-4a7b-b126-771cfc5cfd59)
+![image](https://github.com/user-attachments/assets/a8eb8c3a-6c51-49f3-a865-e2f88ed1bd48)
+
+**Total time spent: 4h**

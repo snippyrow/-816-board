@@ -4,6 +4,9 @@
 A retro computer motherboard for the W65C816S CPU.
 Dual-core expandable, 16mb extended memory, four expansion ports.
 
+## *WHY* did I make this??
+I have always loved building things with my hands, especially electronics things. I also love computers, and always to learn how they work. I believe that this is part of that hobby, building myself a computer system to play around with. I want to develop software, as well as expandable hardware. My end goal is to write a complete opertaing system for this build, and have it run DOOM!
+
 # Basic Specifications
 The primary core is a W65C816S microcontroller, with 32kb of SRAM. EEPROM Space is only accessible to the primary controller. Each core has its own cache, or SRAM chip. Located in the upper-half of the first page, each is 32kb. If the primary controller wants to access EEPROM, I.E. to copy data to another portion of memory, it only needs to access the lower-half. If the primary wants to access the secondary core cache, it uses the expanded memory space. There are two types of busses: core-only and global. The global bus is arbitrated between the two cores. The primary gets priority, then the secondary. In order for the first to access secondary, it must first disable the secondary core. This allows it to always be able to write. The primary core must not access the secondary core too often, as it must be disabled beforehand. If the secondary core needs to access the main bus, it queues to wait before the primary CPU does an internal cycle. At that moment it will take whatever is in the queue registers. This means that the secondary must not access the main memory too often. The secondary cache is only exposed to the global bus if the primary is using it for a transfer. 
 

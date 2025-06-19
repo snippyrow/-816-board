@@ -56,3 +56,12 @@ I spent this time completing the board layout in the kicad designer, as well as 
 ![image](https://github.com/user-attachments/assets/a8eb8c3a-6c51-49f3-a865-e2f88ed1bd48)
 
 **Total time spent: 4h**
+
+# June 16-18th: FInal checks
+
+I sepent the last bit fixing some minor hardware bugs, as well as completing the PCB layout and tracing. The kicad ERC returns zero errors, so at this point it's pretty much done and ready to run a program. It's been a great journey, and now I just need to do the tedious work of fixing all the autorouting artifcats. This includes right-angled corners and useless trace geometry. I really hope this project works out! The final size is 180x137mm. Unfortunatly checking a project like this for errors takes a lot of time, so more issues may come to light in later revisions.
+
+![image](https://github.com/user-attachments/assets/cdf86245-714a-4a66-a2e1-26cbfe7128cd)
+![image](https://github.com/user-attachments/assets/ef8a2141-7cc9-4c85-a4fb-1a2c9eaa64ff)
+
+**Total time spent: 5h**

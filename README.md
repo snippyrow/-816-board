@@ -1,5 +1,6 @@
 
 # Retro computer board!
+![image](https://github.com/user-attachments/assets/aa68e71b-fe0f-4458-8398-38f3ffe12879)
 
 A retro computer motherboard for the W65C816S CPU.
 Dual-core expandable, 16mb extended memory, four expansion ports.

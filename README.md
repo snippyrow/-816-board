@@ -55,6 +55,38 @@ The secondary processor has two control bits, ENABLE and RESET. ENABLE will cont
 #### Serial adapter
 As mentioned earlier, the serial adapter is wired directly to the secondary core, and works as any other expansion device would. The secondary should either disable the adapter or mask interrupts if it were to be doing something other than serial work.
 
+NAME,QTY#,COST (USD),SOURCE
+PCB – 4 Layer 180mmx140mm JLCPCB,5,$25.10,JLCPCB
+0.1uf 1206 SMD Capacitor,20,$2.19,MOUSER
+SMD 1206 Diode,2,$1.10,MOUSER
+EDGE CONN 24P,5,$4.64,ALIEXPRESS
+EDGE CONN 20P,5,$4.17,ALIEXPRESS
+1206 SMD 10K RES.,25,$2.56,MOUSER
+RESISTOR NETWORK 10K,5,$1.83,MOUSER
+W65C816S,2,$26.94,MOUSER
+74HC08,2,$1.10,MOUSER
+AS6C62256,2,$10.57,MOUSER
+74HC373,2,$3.59,MOUSER
+74HC245,9,$7.23,MOUSER
+74HC74,2,$3.52,MOUSER
+AT28C256,1,$12.94,MOUSER
+R6551,1,OWNED,N/A
+3.3V/5V Regulators,5,$1.46,MOUSER
+74HC32,1,$1.42,MOUSER
+74HC688,3,$4.75,MOUSER
+74HC00,1,$1.59,MOUSER
+74HC04,2,$2.92,MOUSER
+74HC14,1,$1.83,MOUSER
+74HC126,1,$1.69,MOUSER
+74HC138,2,$4.12,MOUSER
+74HC10,1,$1.61,MOUSER
+1.8432MHZ,1,OWNED,N/A
+1MHZ,1,$3.69,MOUSER
+,,,
+SHIPPING,1,$14.60,MOUSER
+TOTAL,,$148.12,
+
+
 #### Memory selector
 The memory selector works entirely off the global address busses for selection, choosing serial devices or memory expansion cards. Devices are only selected if either there is an external cycle or the secondary is waiting to write data. 
 

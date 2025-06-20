@@ -1,8 +1,6 @@
 
 # Retro computer board!
 ![image](https://github.com/user-attachments/assets/aa68e71b-fe0f-4458-8398-38f3ffe12879)
-![image](https://github.com/user-attachments/assets/1ce73aea-cf5a-4817-8b8f-1df78f4613dc)
-![image](https://github.com/user-attachments/assets/e4ad2c7a-63f3-42f3-82e9-4308a4349ac1)
 
 
 A retro computer motherboard for the W65C816S CPU.
@@ -23,6 +21,8 @@ While the primary core is not actively using the global/shared memory, the secon
 As stated previously, when the secondary core needs to access shared memory, whether that be an expansion device or general memory, it latches the address. If reading, it sets a control bit and waits for a NMIB. If writing, it sets the control but the other way and latches the write data. When the write is completed, I.E. once the primary is not active, a NMIB signal is sent signaling that the memory transaction was completed. The WAI (wait for interrupt) can be used. 
 The system is based off an expanion-type model, where it encourages expansion devices to be built and used. Some examples could be a VGA card, sound card, or a keyboard/mouse system.
 
+![image](https://github.com/user-attachments/assets/1ce73aea-cf5a-4817-8b8f-1df78f4613dc)
+
 ## Primary core operation
 The core is initiated during a power-on reset phase. The secondary core is disabled during this time, and no secondary transactions are happening. The primary will disable the built-in serial port built in directly to the secondary, and can work without using the secondary core at all. It can use the global bus like the internal core bus.
 
@@ -32,6 +32,7 @@ There are two bits that control the secondary core: ENABLE (0) and RESET (1). Th
 ## Built-in serial adapter
 The built-in serial adapter is wired directly to the secondary core IRQB pin. If it should be disabled, it can be done so by accessing the internal registers. It uses the R6551 chip. Does not include RS232. When reading data from the serial port, it must use the R6551 as an expansion device, located in the external memory lane. This is so that it can be externally controlled by the primary core. Attempt to read by accessing the global data bus, and wait for an interrupt on the NMIB pin. WAI can be used. The same goes for sending data.
 The secondary should rely in the WAI instruction to manage external reads and writes, but could also be triggered by an IRQB signal from the serial adapter. Internal control should be programmed to prevent this. NMI has priority, after that an IRQB will be sent. The flow should be as follows: first an IRQB signal is sent, then an attempt to read the device will be followed by a NMIB signal. When a NMIB is sent during the IRQB routine, it will cause a nested interrupt to occur, allowing it to service properly. 
+![image](https://github.com/user-attachments/assets/e4ad2c7a-63f3-42f3-82e9-4308a4349ac1)
 
 # Timing Control
 Timing control is critical for this system. When PHI2 (the clock) goes from high to low, it indicated the start of a new cycle. VDA/VPA pins change about half-way during the PHI2 low period, and indicate whether the CPU is undergoing an internal cycle. Write and read cycles are all sampled on the falling edge. When VDA/VPA update shortly after the falling edge, the primary core is disconnected from the global bus, and it prepares to do a transaction by updating the address that was latched before. write data is also placed onto the data bus if necessary. On the next falling edge, data is written or data is read. If read, it then sends a NMI to tell the core that it read the data. From there it will read the data back from a specific register. When using it to read, it does not exactly read directly from the memory devices. Instead, it reads from a memory management unit that waits for the primary core to open. The secondary can read the MMU register, located in the upper half of the expandable memory space (bit 23). In order to disconnect the primary, BE is set high, disconnecting the data and address busses. Afterwards, the latches are turned on. 

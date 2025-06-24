@@ -65,3 +65,10 @@ I sepent the last bit fixing some minor hardware bugs, as well as completing the
 ![image](https://github.com/user-attachments/assets/ef8a2141-7cc9-4c85-a4fb-1a2c9eaa64ff)
 
 **Total time spent: 5h**
+
+**June 23rd: A minor upset**
+After joining a forum and asking some questions about my design, I realized that I had done some things incorrectly. I was latching data during the falling edge of PHI2, which in hinesight was incorrect. Due to this I had to change some of my labels as well as switching out most 74HC374's with 74HC373's instead. These work better with the regular bus timings. The pins are almost indentical, so it was a quick fix. I also added some stability by making the address decoding logic check the VDA/VPA pins to see if the bus is valid. This will demand a re-layout and new routing run on the PCB, which should not take long. The price for the project should not change much.
+
+![image](https://github.com/user-attachments/assets/2805c379-85f0-4480-981d-174fac76b9cb)
+
+

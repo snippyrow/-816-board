@@ -71,4 +71,9 @@ After joining a forum and asking some questions about my design, I realized that
 
 ![image](https://github.com/user-attachments/assets/2805c379-85f0-4480-981d-174fac76b9cb)
 
+**June 24th: COntinuation**
+I completed the board layout and routing process, as well as correcting some minor fixes. The board will soon be production ready, the only thing left is to add more comments to the silkscreen layer.
+
+![image](https://github.com/user-attachments/assets/7948b789-c76a-42ab-8da1-1eb38f204e11)
+![image](https://github.com/user-attachments/assets/addd5a5b-dc31-42ec-bc1d-251e52163adf)
 

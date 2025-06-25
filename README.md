@@ -69,6 +69,7 @@ https://www.westerndesigncenter.com/wdc/documentation/w65c816s.pdf
 # BOM
 | Item               | Quantity | Price (USD) |
 |--------------------|----------|-------------|
+| JLCPCB 180x140mm | 5 | $33.00 |
 | 10K Resistor       | 10       | $1.85       |
 | SN74HC373N Latch   | 10       | $9.77       |
 | W65C816S6PG-14 MPU | 2        | $24.20      |
@@ -105,4 +106,4 @@ https://www.westerndesigncenter.com/wdc/documentation/w65c816s.pdf
 | 28-pin Socket      | 6        | $3.84       |
 | 40-pin Socket      | 4        | $3.68       |
 
-**Total: $141.85**
+**Total: $174.85**

@@ -67,33 +67,42 @@ The memory selector works entirely off the global address busses for selection, 
 https://www.westerndesigncenter.com/wdc/documentation/w65c816s.pdf
 
 # BOM
-| NAME                                | QTY# | COST (USD) | SOURCE     |
-|-------------------------------------|------|------------|------------|
-| PCB – 4 Layer 180mmx140mm JLCPCB    | 5    | $25.10     | JLCPCB     |
-| 0.1uf 1206 SMD Capacitor            | 20   | $2.19      | MOUSER     |
-| SMD 1206 Diode                      | 2    | $1.10      | MOUSER     |
-| EDGE CONN 24P                       | 5    | $4.64      | ALIEXPRESS |
-| EDGE CONN 20P                       | 5    | $4.17      | ALIEXPRESS |
-| 1206 SMD 10K RES.                   | 25   | $2.56      | MOUSER     |
-| RESISTOR NETWORK 10K                | 5    | $1.83      | MOUSER     |
-| W65C816S                            | 2    | $26.94     | MOUSER     |
-| 74HC08                              | 2    | $1.10      | MOUSER     |
-| AS6C62256                           | 2    | $10.57     | MOUSER     |
-| 74HC373                             | 2    | $3.59      | MOUSER     |
-| 74HC245                             | 9    | $7.23      | MOUSER     |
-| 74HC74                              | 2    | $3.52      | MOUSER     |
-| AT28C256                            | 1    | $12.94     | MOUSER     |
-| R6551                               | 1    | OWNED      | N/A        |
-| 3.3V/5V Regulators                  | 5    | $1.46      | MOUSER     |
-| 74HC32                              | 1    | $1.42      | MOUSER     |
-| 74HC688                             | 3    | $4.75      | MOUSER     |
-| 74HC00                              | 1    | $1.59      | MOUSER     |
-| 74HC04                              | 2    | $2.92      | MOUSER     |
-| 74HC14                              | 1    | $1.83      | MOUSER     |
-| 74HC126                             | 1    | $1.69      | MOUSER     |
-| 74HC138                             | 2    | $4.12      | MOUSER     |
-| 74HC10                              | 1    | $1.61      | MOUSER     |
-| 1.8432MHZ                           | 1    | OWNED      | N/A        |
-| 1MHZ                                | 1    | $3.69      | MOUSER     |
-| SHIPPING                            | 1    | $14.60     | MOUSER     |
-| **TOTAL**                           |      | **$148.12**|            |
+| Item               | Quantity | Price (USD) |
+|--------------------|----------|-------------|
+| 10K Resistor       | 10       | $1.85       |
+| SN74HC373N Latch   | 10       | $9.77       |
+| W65C816S6PG-14 MPU | 2        | $24.20      |
+| L78L33 Regulator   | 5        | $1.40       |
+| 10uF Capacitor     | 5        | $1.15       |
+| LED (Red)          | 10       | $2.60       |
+| SN74HC04N Inverter | 5        | $6.55       |
+| SN74HC21N Gate     | 4        | $2.60       |
+| Tactile Switch     | 5        | $1.50       |
+| SN74HC245N Transceiver | 10    | $6.22       |
+| AT28C256 EEPROM    | 1        | $11.62      |
+| 150Ω Resistor      | 4        | $1.44       |
+| AS6C62256 SRAM     | 2        | $9.50       |
+| 1MΩ Resistor       | 4        | $1.44       |
+| SN74HC138N Decoder | 5        | $5.50       |
+| 1N914 Diode        | 5        | $0.50       |
+| SN74HC10N Gate     | 4        | $2.52       |
+| 10kΩ Resistor      | 20       | $0.30       |
+| 1kΩ Resistor       | 10       | $0.27       |
+| SN74HC32N Gate     | 4        | $2.20       |
+| SN74HC688N Comparator | 6     | $8.52       |
+| 4.7kΩ Resistor     | 10       | $0.47       |
+| SN74HC126N Buffer  | 4        | $2.64       |
+| SN74HC00N Gate     | 5        | $3.00       |
+| 2N3904 Transistor  | 10       | $0.77       |
+| 30pF Capacitor     | 10       | $1.18       |
+| 0.1uF Capacitor    | 100      | $4.00       |
+| 1MHz Oscillator    | 2        | $6.90       |
+| SN74HC08N Gate     | 4        | $2.40       |
+| SN74HC74N Flip Flop| 4        | $3.60       |
+| 20-pin Socket      | 24       | $3.10       |
+| 16-pin Socket      | 20       | $2.42       |
+| 14-pin Socket      | 20       | $2.20       |
+| 28-pin Socket      | 6        | $3.84       |
+| 40-pin Socket      | 4        | $3.68       |
+
+**Total: $141.85**

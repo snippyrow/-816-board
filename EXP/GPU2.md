@@ -22,3 +22,8 @@ The signal generator will be exactly the same as before. Six comparators get the
 
 ## Action
 Test for any other abnormalities, order a 74HC20 or 74AC20. While doing so begin construction on the new design using breadboards. Signal encoders make 3 boards, ram/output logic makes 1, everything else 1 so five boards. Use jumpers to build, test each one for connection issues.
+
+## NEW
+The timing will work slightly differently now. Each pixel cycle is roughly 40ns, and the RAM has a 55ns access time. The address is not looked-ahead at all, to save board space. During the first-half of each byte cycle, the CPU has access to write data to the RAM. During the second half, the video circuitry has access. Since the data is only latched at the last pixel cycle, the data displayed will be eight pixels dragged forward. This results in a thin black section on the left, and some text going off on the right. This can be corrected in software. During the first cycle, AKA when X0-X2 is 0b000, the SRAM is switched into a writing mode.
+
+On the first cycle the address bus is changed to the correct data, and the data bus is updated. At the same time the OEB bit is set HIGH. During the second cycle the WEB bit is set LOW. This state repeats for another cycle. During the fourth cycle the WEB bit goes HIGH, and the OEB bit goes LOW. The data bus will disengage as well. On the fifth cycle the address bus will change to the pixel address that is required. On the eighth cycle the data is latched into the 74HC165 register. This will lead right into the next byte cycle, where OEB goes HIGH. The counters are updated on the FALLING edge of the pixel clock!
